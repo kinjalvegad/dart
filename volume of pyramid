@@ -1,0 +1,37 @@
+import 'dart:io';
+
+void main() {
+  // Declare variables
+  double l, w, h, vopy;
+
+  // Prompt the user to enter the length, width, and height of the pyramid
+  print("Enter the length of the pyramid base:");
+  String? lengthInput = stdin.readLineSync();
+  
+  print("Enter the width of the pyramid base:");
+  String? widthInput = stdin.readLineSync();
+  
+  print("Enter the height of the pyramid:");
+  String? heightInput = stdin.readLineSync();
+
+  // Check if inputs are not null and can be converted to double
+  if (lengthInput != null && widthInput != null && heightInput != null) {
+    try {
+      // Parse the inputs to double
+      l = double.parse(lengthInput);
+      w = double.parse(widthInput);
+      h = double.parse(heightInput);
+      
+      // Calculate the volume of the pyramid
+      vopy = (l * w * h) / 3;
+      
+      // Display the volume
+      print("The volume of the pyramid is: $vopy");
+    } catch (e) {
+      // Handle error if input is not a valid number
+      print("Invalid input. Please enter numeric values.");
+    }
+  } else {
+    print("Invalid input. Please enter all values.");
+  }
+}
