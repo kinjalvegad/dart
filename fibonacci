@@ -1,0 +1,14 @@
+print("Enter the number of terms in the Fibonacci series:");
+  int terms = int.parse(stdin.readLineSync()!);
+
+  // Initialize the first two Fibonacci numbers
+  int a = 0, b = 1;
+
+  print("Fibonacci Series:");
+
+  for (int i = 0; i < terms; i++) {
+    print(a);
+    int next = a + b; // Calculate the next number
+    a = b; // Update a to the next number
+    b = next; // Update b to the next number
+  }
