@@ -1,0 +1,23 @@
+// volume of cone (r,h,voc)
+
+import 'dart:io';
+
+void main(){
+  
+   const double PI = 3.14;
+
+  // Prompt the user to enter the radius
+  print("Enter the radius of the cone:");
+  double radius = double.parse(stdin.readLineSync()!);
+
+  // Prompt the user to enter the height
+  print("Enter the height of the cone:");
+  double height = double.parse(stdin.readLineSync()!);
+
+  // Calculate the volume of the cone
+  double volume = (1 / 3) * PI * (radius * radius) * height;
+
+  // Display the result
+  print("The volume of the cone is: $volume");
+  
+}
