@@ -1,4 +1,8 @@
-print("Enter the number of terms in the Fibonacci series:");
+import 'dart:io';
+
+void main() {
+  // Prompt the user to enter the number of terms
+  print("Enter the number of terms in the Fibonacci series:");
   int terms = int.parse(stdin.readLineSync()!);
 
   // Initialize the first two Fibonacci numbers
@@ -12,3 +16,4 @@ print("Enter the number of terms in the Fibonacci series:");
     a = b; // Update a to the next number
     b = next; // Update b to the next number
   }
+}
