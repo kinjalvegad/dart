@@ -1,0 +1,24 @@
+import 'dart:io';
+
+void main() {
+  
+  // Prompt the user to enter the length and width of the base
+  print("Enter the length of the base of the prism:");
+  double length = double.parse(stdin.readLineSync()!);
+
+  print("Enter the width of the base of the prism:");
+  double width = double.parse(stdin.readLineSync()!);
+
+  // Prompt the user to enter the height
+  print("Enter the height of the prism:");
+  double height = double.parse(stdin.readLineSync()!);
+
+  // Calculate the base area
+  double baseArea = length * width;
+
+  // Calculate the volume of the prism
+  double volume = baseArea * height;
+
+  // Display the result
+  print("The volume of the rectangular prism is: $volume");
+}
